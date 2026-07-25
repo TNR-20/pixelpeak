@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PixelPeak Games</title>
+<meta name="description" content="PixelPeak Games — coming soon.">
+<meta property="og:title" content="PixelPeak Games">
+<meta property="og:description" content="Coming soon.">
+<meta property="og:image" content="assets/kayak-2000.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{ --ink:#0C0F13; --paper:#FFFFFF; --mute:#C9D1DB; }
+  *{margin:0;padding:0;box-sizing:border-box}
+
+  body{
+    font-family:'Archivo',system-ui,sans-serif;
+    background:var(--ink); color:var(--paper);
+    min-height:100vh;min-height:100dvh;
+    overflow:hidden; -webkit-font-smoothing:antialiased;
+  }
+
+  .stage{
+    position:relative;
+    min-height:100vh;min-height:100dvh;
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  .backdrop{
+    position:absolute;inset:0;z-index:0;
+    background:url('assets/kayak-2000.jpg') center 42% / cover;
+    transform:scale(1.06);
+    animation:drift 30s ease-in-out infinite alternate;
+  }
+  @keyframes drift{
+    from{transform:scale(1.06) translate3d(0,0,0)}
+    to{transform:scale(1.13) translate3d(-1.2%,-1.4%,0)}
+  }
+
+  .veil{
+    position:absolute;inset:0;z-index:1;
+    background:radial-gradient(120% 90% at 50% 50%, rgba(8,11,15,.35) 0%, rgba(8,11,15,.62) 70%, rgba(8,11,15,.82) 100%);
+  }
+
+  .center{
+    position:relative;z-index:2;
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+    padding:2rem;
+    opacity:0;
+    animation:rise 1.2s cubic-bezier(.2,.7,.2,1) .2s forwards;
+  }
+
+  .center svg{
+    width:clamp(64px,11vw,104px); height:auto; display:block;
+    filter:drop-shadow(0 2px 18px rgba(0,0,0,.4));
+  }
+
+  .wordmark{
+    margin-top:clamp(1.4rem,3.5vh,2.2rem);
+    font-size:clamp(1.5rem,4.5vw,2.6rem);
+    font-weight:400; letter-spacing:.34em; padding-left:.34em;
+    text-shadow:0 2px 20px rgba(0,0,0,.4);
+  }
+
+  .sub{
+    margin-top:clamp(1.4rem,4vh,2.4rem);
+    display:flex; align-items:center; gap:.7rem;
+    font-size:clamp(.62rem,1.4vw,.74rem);
+    letter-spacing:.42em; font-weight:500; padding-left:.42em;
+    color:var(--mute);
+  }
+  .sub::before,.sub::after{
+    content:""; width:clamp(20px,5vw,44px); height:1px;
+    background:rgba(255,255,255,.35);
+  }
+
+  @keyframes rise{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .backdrop{animation:none;transform:scale(1.06)}
+    .center{animation:none;opacity:1}
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="backdrop" role="img" aria-label="First-person view from a kayak on still turquoise water between sandstone cliffs"></div>
+    <div class="veil"></div>
+    <div class="center">
+      <svg viewBox="0 0 100 60" fill="none" aria-hidden="true">
+        <path d="M22 44 L50 16 L78 44" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="wordmark">PIXELPEAK</div>
+      <div class="sub">COMING SOON</div>
+    </div>
+  </div>
+</body>
+</html>
