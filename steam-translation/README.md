@@ -49,9 +49,35 @@ Discord/WhatsApp'a link atınca düzgün önizleme çıksın diye OG etiketleri 
 
 ## Metin güncellemek
 
-Çeviriler `index.html` içinde `const LANGS = [...]` satırında JSON olarak duruyor.
-BBCode olduğu gibi saklanıyor, sayfa render ederken çeviriyor — yani Steam'e
-yapıştıracağın metnin aynısı burada.
+Yeni bir çeviri dosyası çıktığında bu klasörde:
+
+    python3 update-texts.py kayak-photography-sim-store-localization-v2_7.md --label v2.7
+
+`index.html` içindeki metinleri değiştirir, başka hiçbir şeye dokunmaz.
+Eskisini `index.html.bak` olarak saklar. Yazmadan önce kontrol ettikleri:
+
+- her dilin kısa açıklaması 300 karakterin altında mı
+- bütün diller aynı paragraf sayısına sahip mi (yoksa karşılaştırma modu ve
+  geri gelen notlardaki paragraf numaraları kayar)
+- metinde geçen `{STEAM_APP_IMAGE}/extras/...` klipleri `assets/` içinde var mı
+- sayfanın render edemeyeceği bir BBCode etiketi var mı
+
+Bir tanesi tutmazsa dosyayı hiç yazmaz, nedenini söyler.
+
+`--label` sayfanın üstünde ve geri gelen notların başında görünür — kimin hangi
+taslağa baktığı karışmasın diye. Şu an: **v2.6**
+
+Markdown formatı şu olduğu sürece çalışır (mevcut dosyaların formatı):
+
+    # Dil Adı — `steamkodu`
+    ...
+    ```
+    kısa açıklama
+    ```
+    ...
+    ```
+    [p]uzun açıklama BBCode ile[/p]
+    ```
 
 ## Notlar
 
