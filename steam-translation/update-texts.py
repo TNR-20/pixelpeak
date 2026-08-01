@@ -5,9 +5,15 @@ Kayak Photography Sim — store text check page updater.
 Usage:
     python3 update-texts.py <localization.md> [--label v2.6]
 
-Reads the localization markdown, checks it, and writes the texts into
-index.html. Nothing else in the page is touched. Old index.html is kept
-as index.html.bak.
+Reads the localization markdown, checks it, and writes it out twice:
+
+  texts.md    the page fetches this at load time  <- this is what visitors see
+  index.html  a baked-in copy, used only if texts.md cannot be fetched
+
+Nothing else in the page is touched. Old index.html is kept as index.html.bak.
+
+If you only replace texts.md by hand, the live page updates too. Running this
+script keeps the fallback in sync and checks the file before you push.
 
 The markdown must keep this shape per language (this is the format the
 existing files already use):
@@ -91,14 +97,14 @@ def main():
         die("short description too long: " +
             ", ".join("%s (%d chars)" % (l["code"], len(l["short"])) for l in over))
 
-    # 2. every language must share the English block structure, or compare
-    #    mode and the paragraph numbers in reviewers' notes stop lining up
-    ref = structure(langs[0]["full"])
-    for l in langs:
-        n = len(structure(l["full"]))
-        if n != len(ref):
-            die("%s has %d paragraphs, %s has %d — they must match."
-                % (l["code"], n, langs[0]["code"], len(ref)))
+    # 2. a language with a different paragraph count still works, but its
+    #    compare view falls back to whole-text side by side
+    ref = len(structure(langs[0]["full"]))
+    odd_shape = [(l["code"], len(structure(l["full"]))) for l in langs
+                 if len(structure(l["full"])) != ref]
+    for code, n in odd_shape:
+        print("  ! %s has %d paragraphs, %s has %d — compare mode will show it"
+              "\n    side by side rather than paragraph by paragraph." % (code, n, langs[0]["code"], ref))
 
     # 3. referenced media must actually be in assets/
     missing = set()
@@ -117,29 +123,40 @@ def main():
         if odd:
             print("  ! %s uses tags the page does not render: %s" % (l["code"], ", ".join(sorted(set(odd)))))
 
+    if odd_shape:
+        print("")
     for l in langs:
-        print("  %-11s short %3d/%d   paragraphs %d" %
-              (l["code"], len(l["short"]), SHORT_CAP, len(structure(l["full"]))))
+        n = len(l["short"])
+        flag = "  <- close to the cap" if n > SHORT_CAP - 15 else ""
+        print("  %-11s short %3d/%d   paragraphs %d%s" %
+              (l["code"], n, SHORT_CAP, len(structure(l["full"])), flag))
 
     # write
     page = PAGE.read_text(encoding="utf-8")
     (HERE / "index.html.bak").write_text(page, encoding="utf-8")
 
     data = json.dumps(langs, ensure_ascii=False)
-    page, n = re.subn(r"const LANGS = .*?;\n", lambda m: "const LANGS = " + data + ";\n",
+    page, n = re.subn(r"const LANGS_BAKED = .*?;\n", lambda m: "const LANGS_BAKED = " + data + ";\n",
                       page, count=1, flags=re.S)
     if n != 1:
-        die("could not find the 'const LANGS = ...' line in index.html.")
+        die("could not find the 'const LANGS_BAKED = ...' line in index.html.")
 
     if label:
-        page, n = re.subn(r'const TEXT_VERSION = ".*?";',
-                          lambda m: 'const TEXT_VERSION = "%s";' % label, page, count=1)
+        page, n = re.subn(r'(?:let|const) TEXT_VERSION = ".*?";',
+                          lambda m: 'let TEXT_VERSION = "%s";' % label, page, count=1)
         if n != 1:
             print("  ! could not update the version label")
 
     PAGE.write_text(page, encoding="utf-8")
-    print("\n  index.html updated — %d languages%s" % (len(langs), (", labelled " + label) if label else ""))
-    print("  previous version saved as index.html.bak")
+    source = md_path.read_text(encoding="utf-8")
+    source = re.sub(r"^<!--\s*label:[^>]*-->\n*", "", source)
+    if label:
+        source = "<!-- label: %s -->\n\n%s" % (label, source)
+    (HERE / "texts.md").write_text(source, encoding="utf-8")
+    print("\n  updated — %d languages%s" % (len(langs), (", labelled " + label) if label else ""))
+    print("    texts.md    what the live page reads")
+    print("    index.html  fallback copy, used if texts.md cannot be fetched")
+    print("  previous index.html saved as index.html.bak")
     print("  open index.html in a browser to check, then push.\n")
 
 

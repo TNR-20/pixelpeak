@@ -49,23 +49,33 @@ Discord/WhatsApp'a link atınca düzgün önizleme çıksın diye OG etiketleri 
 
 ## Metin güncellemek
 
-Yeni bir çeviri dosyası çıktığında bu klasörde:
+Sayfa metinleri **`texts.md`** dosyasından, açılırken okuyor. Yani sunucudaki
+`texts.md`'yi değiştirip push'lamak yeterli — `index.html`'e dokunmana gerek yok.
+Dosya adı tam olarak `texts.md` olmalı ve `index.html` ile aynı klasörde durmalı.
 
-    python3 update-texts.py kayak-photography-sim-store-localization-v2_7.md --label v2.7
+`index.html` içinde metinlerin bir kopyası daha var; sadece `texts.md` çekilemezse
+(dosyayı bilgisayarında `file://` ile açtığında, ya da dosya eksikse) devreye giriyor.
 
-`index.html` içindeki metinleri değiştirir, başka hiçbir şeye dokunmaz.
-Eskisini `index.html.bak` olarak saklar. Yazmadan önce kontrol ettikleri:
+Güvenli yol, ikisini birden güncelleyen script:
 
-- her dilin kısa açıklaması 300 karakterin altında mı
-- bütün diller aynı paragraf sayısına sahip mi (yoksa karşılaştırma modu ve
-  geri gelen notlardaki paragraf numaraları kayar)
+    python3 update-texts.py yeni-dosya.md --label v2.8
+
+Yaptıkları: dosyayı kontrol eder, `texts.md` olarak yazar, `index.html` içindeki
+yedek kopyayı da tazeler, eskisini `index.html.bak` olarak saklar. Kontrolleri:
+
+- her dilin kısa açıklaması 300 karakterin altında mı (300'e 15'ten yakınsa uyarır)
+- diller arasında paragraf sayısı farkı var mı — **durdurmaz**, uyarır. Farklı olan
+  dilin karşılaştırma görünümü paragraf paragraf değil, iki metin yan yana olur.
 - metinde geçen `{STEAM_APP_IMAGE}/extras/...` klipleri `assets/` içinde var mı
 - sayfanın render edemeyeceği bir BBCode etiketi var mı
 
-Bir tanesi tutmazsa dosyayı hiç yazmaz, nedenini söyler.
-
 `--label` sayfanın üstünde ve geri gelen notların başında görünür — kimin hangi
-taslağa baktığı karışmasın diye. Şu an: **v2.6**
+taslağa baktığı karışmasın diye. Script bunu `texts.md`'nin ilk satırına
+`<!-- label: v2.8 -->` olarak yazar; elle düzenlersen o satırı güncelle.
+
+Tarayıcı cache'i: sayfa `texts.md`'yi `no-store` ile çekiyor, ama GitHub Pages'in
+CDN'i birkaç dakika eski dosyayı verebilir. Hemen görmek istersen hard refresh
+(Ctrl+Shift+R).
 
 Markdown formatı şu olduğu sürece çalışır (mevcut dosyaların formatı):
 
@@ -78,8 +88,3 @@ Markdown formatı şu olduğu sürece çalışır (mevcut dosyaların formatı):
     ```
     [p]uzun açıklama BBCode ile[/p]
     ```
-
-## Notlar
-
-Sunucu yok. Notlar kontrol edenin tarayıcısında (localStorage) duruyor,
-"Send my notes" ile metin olarak kopyalanıp sana gönderiliyor.
