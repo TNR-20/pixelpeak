@@ -19,7 +19,7 @@ The cause was the same across the whole set: the first pass mapped English sente
 
 This is a better second draft. It is not a verified translation.
 
-**Four are now verified.** Russian was written by a native speaker rather than translated. Ukrainian was reviewed and largely rewritten by one. French was reviewed and largely rewritten by a native speaker. Spanish was read by a Latin American speaker — two of her three corrections are region-neutral and were kept, but the Spain field itself is still unverified. Turkish has been read by Hasan and corrected. The remaining eleven are unverified.
+**Four are now verified.** Russian was written by a native speaker rather than translated. Ukrainian was reviewed and largely rewritten by one. French and Simplified Chinese were each reviewed and largely rewritten by a native speaker. Spanish was read by a Latin American speaker — two of her three corrections are region-neutral and were kept, but the Spain field itself is still unverified. Turkish has been read by Hasan and corrected. The remaining eleven are unverified.
 
 Two rounds of native review have now happened, and both found real errors that the self-review passes missed. The errors that survive self-review are tonal, not grammatical: phrasing that parses correctly but lands wrong. When asking a native reader to check one of these, the useful question is "does anything here sound unkind or off," not "is this correct."
 
@@ -54,9 +54,9 @@ A missing language is neutral: those players see the English page and nothing is
 | Polish | polish | 232 |
 | Portuguese (Brazil) | brazilian | 257 |
 | Russian | russian | 266 |
-| Simplified Chinese | schinese | 86 |
+| Simplified Chinese | schinese | 103 |
 | Thai | thai | 207 |
-| Traditional Chinese | tchinese | 88 |
+| Traditional Chinese | tchinese | 105 |
 | Turkish | turkish | 264 |
 | Ukrainian | ukrainian | 299 |
 
@@ -258,16 +258,18 @@ Written by a native speaker (a friend of Hasan's), not translated. Uses formal *
 
 # Simplified Chinese — `schinese`
 
-**Short** (86)
+Reviewed and largely rewritten by a native speaker against this draft. His wording is kept as given; `地面` (ground) was corrected to `水面` (water surface) in the fish paragraph, and his colon-style feature labels were converted to the bold-label format used elsewhere. He proposed a Chinese title, 《皮划艇摄影之旅》 — not adopted, pending a decision on whether the game gets an official Chinese name.
+
+**Short** (103)
 
 ```
-一款慢下来的皮划艇与摄影模拟游戏。开阔的水面，一条不赶路的船，没有非去不可的地方。想划多久就划多久，看到什么就拍什么，潜进水里看看底下有什么。没有东西追你，也没有东西计时。
+一款放松的皮划艇与摄影模拟游戏。开阔的水域、一艘慢悠悠的船；你无需赶往任何地方：松弛划船直到想停下为止，拍下任何吸引你眼球的事物，或是潜入水中探索水下世界。无人追赶，也没有时间限制。只需放松身心，随心探索。
 ```
 
 **Full**
 
 ```
-[p][b]Kayak Photography Sim[/b] 是一款第一人称皮划艇游戏：想往哪儿划就往哪儿划，把一路上遇到的东西拍下来，水底下的也一样。[/p][p]上船，蹬开岸边，挑个方向。水清得能一眼看到底，船下的世界和身边的景色一样，都是这片天地的一部分。[/p][h2]没有什么会来打扰你[/h2][p]没有计时，没有体力条，没有排行榜。也没有需要跟上的节奏。[/p][p]只管一直划，享受这一路。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_paddle"][/img][/p][p] [/p][h2]手里握着相机[/h2][p]举起相机，周围就慢了下来。推近镜头，背景开始虚化。按下快门，能听见咔嚓一声。[/p][p]拍下的照片会一直留在相册里，关掉游戏也还在，还会以普通图片文件的形式存进你的硬盘。想打印、想发帖、想发给朋友，都随你。你划过的地方够有电影感，其中几张多半会进你的壁纸文件夹。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_photo2"][/img][/p][p] [/p][h2]潜到水面以下[/h2][p]水不只是背景。能看的东西有一半在水面之下，而且没有一处够不着——什么时候想离开皮划艇都行。没有装备界面，没有潜水计时，也没有氧气条。[/p][p]一艘侧翻的帆船。一架断成两截、卧在沙上的客机。没有标记，也没有指引——你能撞见它们，只是因为在对的时候低头看了一眼。[/p][p]水底下的鱼自顾自地过日子。靠近到能拍得到、又不惊散鱼群的距离，拍完再慢慢浮上去。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_diveandexploreunderwater"][/img][/p][p] [/p][h2]划桨的声音[/h2][p]每一桨都单独处理。右边划，声音就从右边来；左边划，就从左边来。[/p][p]完全停下，桨就抬起来。船靠着惯性继续往前滑，直到你把桨重新放进水里。[/p][h2]主要特色[/h2][list][*][p][b]有真实惯性的皮划艇。[/b][/p][/*][*][p][b]一望无际的开阔水面。[/b]没有路线，没有路径点，也没有走错的方向。划出去，看看会到哪儿。[/p][/*][*][p][b]游戏里的实时相机。[/b]28-70mm，随变焦而来的背景虚化，会响的快门。水上水下都能用。[/p][/*][*][p][b]存在自己硬盘上的照片。[/b]关掉游戏也还在的相册，还有实实在在的图片文件。[/p][/*][*][p][b]想在哪潜就在哪潜，什么时候都行。[/b]离开皮划艇，进到温暖清澈的水里，没有氧气条，也没有时间限制。[/p][/*][*][p][b]没人标注过的残骸。[/b]一艘沉没的帆船、一架坠落的飞机，还有在它们周围生活的稀有鱼类。地图上一个都找不到。[/p][/*][*][p][b]每一桨都有自己的水声。[/b]每一下听起来都不一样，从你发力的那一侧传来。[/p][/*][/list]
+[p][b]Kayak Photography Sim[/b] 是一款第一人称皮划艇游戏：想往哪儿划就往哪儿划，一路上、甚至是水底下遇到的风景都可以拍照纪念。[/p][p]上船，出发，选个方向。水清澈得能一眼见底，游船所见世界和现实中一样真实而动人。[/p][h2]无人打扰，无拘无束[/h2][p]没有计时器，没有耐力条，没有排行榜，更没有任何需要跟上的节奏。[/p][p]只管一直划，享受这一路。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_paddle"][/img][/p][p] [/p][h2]手握相机[/h2][p]举起相机，周围就慢了下来。推近镜头，背景开始虚化。按下快门，能听见咔嚓一声。[/p][p]每次拍摄的照片都会保存在相册中，可以直接保存到你的电脑上。想打印出来、发帖，或者发给朋友，都可以。你划船经过的那些地方风景如画，说不定哪张会成为你的桌面壁纸。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_photo2"][/img][/p][p] [/p][h2]潜水窥见水下世界[/h2][p]水面并非摆设。一半景致都藏在水面之下，而你可以去往其中的一切——你可以随时出入皮划艇：随心所欲地游览，没有额外装备，没有计时器，也没有氧气条。[/p][p]一艘侧翻的帆船。一架横亘在沙滩上的客机。没有任何指引——你之所以发现它们，只是因为在恰当的瞬间低头望去。[/p][p]水底的鱼儿们照常游弋。你可以惬意地靠近拍摄，保持不惊扰它们的距离，再随时浮回水面。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_diveandexploreunderwater"][/img][/p][p] [/p][h2]划桨声[/h2][p]每一次划水都伴随着沉浸式水声。左桨或是右桨入水，水声也从相应一侧响起。[/p][p]完全不动，桨就会抬出水面。船会随着惯性继续滑行，直到你再次划桨为止。[/p][h2]主要特色[/h2][list][*][p][b]一艘拥有真实惯性的皮划艇。[/b][/p][/*][*][p][b]广阔水域任你驰骋。[/b]没有路线，没有航点，没有错误的方向。划出去，看看最终会抵达何处。[/p][/*][*][p][b]游戏内实时相机。[/b]28-70毫米焦距，变焦时背景虚化，快门声清脆。水下水上均可使用。[/p][/*][*][p][b]照片本地保存。[/b]图像直接保存至你的硬盘，关掉游戏也可以翻看。[/p][/*][*][p][b]随时随地潜入水下。[/b]离开皮划艇，畅游清澈的水域——无需关注氧气和时间限制。[/p][/*][*][p][b]待探索的残骸。[/b]沉没的帆船、坠毁的飞机，以及栖息在周围的稀有鱼类——这些在地图上均未标注，等待你去发掘。[/p][/*][*][p][b]每次划桨都伴随着独特水声。[/b]每一下声音各不相同，且源自你划桨的那一侧。[/p][/*][/list]
 ```
 
 ---
@@ -292,16 +294,18 @@ The spaces inside the Thai text are intentional — Thai does not separate words
 
 # Traditional Chinese — `tchinese`
 
-**Short** (88)
+Rebuilt to follow the native review of the Simplified text, then adapted to Taiwan usage — this is a conversion, not a native Traditional read, so it is still unverified. Vocabulary swapped rather than character-converted: 獨木舟 / 桌布 / 檔案・影像 / 相簿 / 本機 / 硬碟 / 列印 / 發文 / 即時 / 儲存 / 體力槽・氧氣槽 / 導航點 / 標示, plus 牠們 for the fish.
+
+**Short** (105)
 
 ```
-一款讓人慢下來的獨木舟與攝影模擬遊戲。開闊的水面、一艘不趕路的船，沒有非去不可的地方。想划多久就划多久，看到什麼就拍什麼，潛進水裡看看底下有什麼。沒有東西追你，也沒有東西計時。
+一款放鬆的獨木舟與攝影模擬遊戲。開闊的水域、一艘慢悠悠的船；你無需趕往任何地方：悠閒地划船，直到想停下為止，拍下任何吸引你目光的事物，或是潛入水中探索水下世界。無人追趕，也沒有時間限制。只需放鬆身心，隨心探索。
 ```
 
 **Full**
 
 ```
-[p][b]Kayak Photography Sim[/b] 是一款第一人稱獨木舟遊戲：想往哪划就往哪划，把一路上遇到的東西拍下來，水底下的也一樣。[/p][p]上船，蹬開岸邊，挑個方向。水清得能一眼看到底，船下的世界和身邊的景色一樣，都是這片天地的一部分。[/p][h2]沒有什麼會來打擾你[/h2][p]沒有計時，沒有體力槽，沒有排行榜。也沒有需要跟上的節奏。[/p][p]只管一直划，享受這一路。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_paddle"][/img][/p][p] [/p][h2]手裡握著相機[/h2][p]舉起相機，周圍就慢了下來。推近鏡頭，背景開始虛化。按下快門，能聽見喀嚓一聲。[/p][p]拍下的照片會一直留在相簿裡，關掉遊戲也還在，還會以普通圖片檔的形式存進你的硬碟。想列印、想發文、想傳給朋友，都隨你。你划過的地方夠有電影感，其中幾張多半會進你的桌布資料夾。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_photo2"][/img][/p][p] [/p][h2]潛到水面以下[/h2][p]水不只是背景。能看的東西有一半在水面之下，而且沒有一處到不了——什麼時候想離開獨木舟都行。沒有裝備介面，沒有潛水計時，也沒有氧氣條。[/p][p]一艘側翻的帆船。一架斷成兩截、臥在沙上的客機。沒有標記，也沒有指引——你能撞見它們，只是因為在對的時候低頭看了一眼。[/p][p]水底下的魚自顧自地過日子。靠近到能拍得到、又不驚散魚群的距離，拍完再慢慢浮上去。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_diveandexploreunderwater"][/img][/p][p] [/p][h2]划槳的聲音[/h2][p]每一槳都單獨處理。右邊划，聲音就從右邊來；左邊划，就從左邊來。[/p][p]完全停下，槳就抬起來。船靠著慣性繼續往前滑，直到你把槳重新放進水裡。[/p][h2]主要特色[/h2][list][*][p][b]有真實慣性的獨木舟。[/b][/p][/*][*][p][b]一望無際的開闊水面。[/b]沒有路線，沒有導航點，也沒有走錯的方向。划出去，看看會到哪。[/p][/*][*][p][b]遊戲裡的即時相機。[/b]28-70mm，隨變焦而來的背景虛化，會響的快門。水上水下都能用。[/p][/*][*][p][b]存在自己硬碟上的照片。[/b]關掉遊戲也還在的相簿，還有實實在在的圖片檔。[/p][/*][*][p][b]想在哪潛就在哪潛，什麼時候都行。[/b]離開獨木舟，進到溫暖清澈的水裡，沒有氧氣條，也沒有時間限制。[/p][/*][*][p][b]沒人標註過的殘骸。[/b]一艘沉沒的帆船、一架墜落的飛機，還有在它們周圍生活的稀有魚類。地圖上一個都找不到。[/p][/*][*][p][b]每一槳都有自己的水聲。[/b]每一下聽起來都不一樣，從你出力的那一側傳來。[/p][/*][/list]
+[p][b]Kayak Photography Sim[/b] 是一款第一人稱獨木舟遊戲：想往哪划就往哪划，一路上、甚至是水底下遇到的風景都可以拍照留念。[/p][p]上船，出發，選個方向。水清澈得能一眼見底，遊船所見的世界和現實中一樣真實而動人。[/p][h2]無人打擾，無拘無束[/h2][p]沒有計時器，沒有體力槽，沒有排行榜，更沒有任何需要跟上的節奏。[/p][p]只管一直划，享受這一路。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_paddle"][/img][/p][p] [/p][h2]手握相機[/h2][p]舉起相機，周圍就慢了下來。推近鏡頭，背景開始虛化。按下快門，能聽見喀嚓一聲。[/p][p]每次拍攝的照片都會保存在相簿中，也能直接存到你的電腦上。想列印出來、發文，或是傳給朋友，都可以。你划船經過的那些地方風景如畫，說不定哪張會成為你的桌布。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_photo2"][/img][/p][p] [/p][h2]潛水窺見水下世界[/h2][p]水面並非擺設。一半的景致都藏在水面之下，而這一切你都能抵達——隨時可以進出獨木舟：隨心所欲地遊覽，沒有額外裝備，沒有計時器，也沒有氧氣槽。[/p][p]一艘側翻的帆船。一架橫亙在沙灘上的客機。沒有任何指引——你之所以發現它們，只是因為在恰當的瞬間低頭望去。[/p][p]水底的魚兒照常游弋。你可以愜意地靠近拍攝，保持不驚擾牠們的距離，再隨時浮回水面。[/p][p][img src="{STEAM_APP_IMAGE}/extras/gif_diveandexploreunderwater"][/img][/p][p] [/p][h2]划槳聲[/h2][p]每一次划水都伴隨著沉浸式水聲。左槳或右槳入水，水聲也從相應的一側響起。[/p][p]完全停下，槳就會抬出水面。船會隨著慣性繼續滑行，直到你再次划槳為止。[/p][h2]主要特色[/h2][list][*][p][b]一艘擁有真實慣性的獨木舟。[/b][/p][/*][*][p][b]廣闊水域任你馳騁。[/b]沒有路線，沒有導航點，沒有錯誤的方向。划出去，看看最後會抵達何處。[/p][/*][*][p][b]遊戲內即時相機。[/b]28-70毫米焦距，變焦時背景虛化，快門聲清脆。水上水下皆可使用。[/p][/*][*][p][b]照片存在本機。[/b]影像直接儲存到你的硬碟，關掉遊戲也能翻看。[/p][/*][*][p][b]隨時隨地潛入水下。[/b]離開獨木舟，暢遊清澈的水域——無需在意氧氣與時間限制。[/p][/*][*][p][b]待探索的殘骸。[/b]沉沒的帆船、墜毀的飛機，以及棲息在周圍的稀有魚類——這些在地圖上均未標示，等待你去發掘。[/p][/*][*][p][b]每次划槳都伴隨著獨特水聲。[/b]每一下聲音各不相同，且源自你划槳的那一側。[/p][/*][/list]
 ```
 
 ---
