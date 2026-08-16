@@ -204,8 +204,28 @@ background:radial-gradient(120% 90% at 50% 50%, rgba(8,11,15,.48) 0%, rgba(8,11,
   .tagline strong{color:#fff;font-weight:500}
   @media (prefers-reduced-motion:reduce){ .tagline{animation:none;opacity:1} }
 
-  .contact{
-    margin-top:clamp(1.8rem,4vh,2.6rem);
+  .email{
+    margin-top:clamp(2.8rem,6.5vh,4.2rem);
+    font-family:inherit;
+    font-size:clamp(.82rem,1.5vw,.98rem);
+    font-weight:400;
+    letter-spacing:.06em;
+    color:var(--mute);
+    text-shadow:0 1px 10px rgba(0,0,0,.5);
+    opacity:0;
+    animation:rise 1.2s cubic-bezier(.2,.7,.2,1) .75s forwards;
+  }
+
+  .buttons{
+    margin-top:clamp(1.4rem,3vh,2rem);
+    display:flex;
+    gap:clamp(.7rem,1.6vw,1rem);
+    flex-wrap:wrap;
+    justify-content:center;
+    opacity:0;
+    animation:rise 1.2s cubic-bezier(.2,.7,.2,1) .9s forwards;
+  }
+  .btn{
     display:inline-block;
     padding:.7em 1.9em;
     font-family:inherit;
@@ -221,19 +241,19 @@ background:radial-gradient(120% 90% at 50% 50%, rgba(8,11,15,.48) 0%, rgba(8,11,
     background:rgba(255,255,255,.04);
     backdrop-filter:blur(2px);
     -webkit-backdrop-filter:blur(2px);
-    transition:border-color .3s ease, background .3s ease, letter-spacing .3s ease;
-    opacity:0;
-    animation:rise 1.2s cubic-bezier(.2,.7,.2,1) .75s forwards;
+    transition:border-color .3s ease, background .3s ease;
   }
-  .contact:hover,.contact:focus-visible{
+  .btn:hover,.btn:focus-visible{
     border-color:rgba(255,255,255,.85);
     background:rgba(255,255,255,.12);
   }
-  .contact:focus-visible{
+  .btn:focus-visible{
     outline:2px solid rgba(255,255,255,.6);
     outline-offset:3px;
   }
-  @media (prefers-reduced-motion:reduce){ .contact{animation:none;opacity:1} }
+  @media (prefers-reduced-motion:reduce){
+    .email,.buttons{animation:none;opacity:1}
+  }
 </style>
 </head>
 <body>
@@ -247,7 +267,11 @@ background:radial-gradient(120% 90% at 50% 50%, rgba(8,11,15,.48) 0%, rgba(8,11,
       </svg>
       <h1 class="wordmark">PIXELPEAK <span class="vh">Games</span></h1>
       <p class="tagline">The developer of Kayak Photography Sim.</p>
-      <a class="contact" href="https://www.linkedin.com/in/hasan-taner/" target="_blank" rel="noopener noreferrer">Contact</a>
+      <p class="email">hasan@pixelpeak.games</p>
+      <nav class="buttons" aria-label="Links">
+        <a class="btn" href="https://discord.gg/cthnkspTBE" target="_blank" rel="noopener noreferrer">Discord</a>
+        <a class="btn" href="https://www.linkedin.com/in/hasan-taner/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
     </div>
 
     <!-- Crawlable content for search engines; visually hidden, not cloaked (same message as visible copy) -->
