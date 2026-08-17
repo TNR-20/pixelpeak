@@ -204,8 +204,38 @@ background:radial-gradient(120% 90% at 50% 50%, rgba(8,11,15,.48) 0%, rgba(8,11,
   .tagline strong{color:#fff;font-weight:500}
   @media (prefers-reduced-motion:reduce){ .tagline{animation:none;opacity:1} }
 
+  .btn-primary{
+    margin-top:clamp(2.4rem,5.5vh,3.6rem);
+    display:inline-block;
+    padding:1em 2.8em;
+    font-family:inherit;
+    font-size:clamp(.72rem,1.4vw,.86rem);
+    font-weight:500;
+    letter-spacing:.28em;
+    padding-left:calc(2.8em + .28em);
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--paper);
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:2px;
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+    transition:border-color .3s ease, background .3s ease;
+    opacity:0;
+    animation:rise 1.2s cubic-bezier(.2,.7,.2,1) .6s forwards;
+  }
+  .btn-primary:hover,.btn-primary:focus-visible{
+    border-color:rgba(255,255,255,.85);
+    background:rgba(255,255,255,.12);
+  }
+  .btn-primary:focus-visible{ outline:2px solid rgba(255,255,255,.6); outline-offset:3px; }
+  @media (prefers-reduced-motion:reduce){
+    .btn-primary{animation:none;opacity:1}
+  }
+
   .email{
-    margin-top:clamp(2.8rem,6.5vh,4.2rem);
+    margin-top:clamp(2rem,4.5vh,3rem);
     font-family:inherit;
     font-size:clamp(.82rem,1.5vw,.98rem);
     font-weight:400;
@@ -267,9 +297,10 @@ background:radial-gradient(120% 90% at 50% 50%, rgba(8,11,15,.48) 0%, rgba(8,11,
       </svg>
       <h1 class="wordmark">PIXELPEAK <span class="vh">Games</span></h1>
       <p class="tagline">The developer of Kayak Photography Sim.</p>
+      <a class="btn-primary" href="PASTE_YOUR_STEAM_URL_HERE" target="_blank" rel="noopener noreferrer">Wishlist on Steam</a>
       <p class="email">hasan@pixelpeak.games</p>
       <nav class="buttons" aria-label="Links">
-        <a class="btn" href="https://discord.gg/cthnkspTBE" target="_blank" rel="noopener noreferrer">Discord</a>
+        <a class="btn" href="PASTE_YOUR_DISCORD_INVITE_HERE" target="_blank" rel="noopener noreferrer">Discord</a>
         <a class="btn" href="https://www.linkedin.com/in/hasan-taner/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </nav>
     </div>
